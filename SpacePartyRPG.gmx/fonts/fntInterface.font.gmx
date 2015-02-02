@@ -22,8 +22,8 @@
     <glyph character="108" x="222" y="95" w="11" h="20" shift="13" offset="1"/>
     <glyph character="61" x="50" y="121" w="8" h="18" shift="11" offset="1"/>
     <glyph character="77" x="147" y="2" w="17" h="20" shift="19" offset="1"/>
-    <glyph character="56" x="206" y="69" w="13" h="21" shift="14" offset="0"/>
     <glyph character="122" x="2" y="69" w="15" h="20" shift="15" offset="0"/>
+    <glyph character="56" x="206" y="69" w="13" h="21" shift="14" offset="0"/>
     <glyph character="35" x="107" y="121" w="11" h="10" shift="12" offset="0"/>
     <glyph character="115" x="131" y="69" w="13" h="21" shift="13" offset="0"/>
     <glyph character="105" x="88" y="121" w="7" h="20" shift="8" offset="0"/>
@@ -35,11 +35,11 @@
     <glyph character="32" x="42" y="121" w="6" h="24" shift="6" offset="0"/>
     <glyph character="91" x="223" y="47" w="15" h="20" shift="15" offset="0"/>
     <glyph character="114" x="75" y="95" w="13" h="20" shift="13" offset="1"/>
-    <glyph character="97" x="56" y="25" w="16" h="20" shift="16" offset="0"/>
     <glyph character="57" x="161" y="69" w="13" h="21" shift="14" offset="0"/>
-    <glyph character="79" x="88" y="2" w="18" h="21" shift="18" offset="0"/>
-    <glyph character="107" x="51" y="69" w="14" h="20" shift="14" offset="1"/>
     <glyph character="98" x="155" y="47" w="15" h="20" shift="15" offset="0"/>
+    <glyph character="97" x="56" y="25" w="16" h="20" shift="16" offset="0"/>
+    <glyph character="107" x="51" y="69" w="14" h="20" shift="14" offset="1"/>
+    <glyph character="79" x="88" y="2" w="18" h="21" shift="18" offset="0"/>
     <glyph character="46" x="200" y="121" w="5" h="20" shift="9" offset="2"/>
     <glyph character="38" x="120" y="121" w="11" h="10" shift="12" offset="0"/>
     <glyph character="100" x="35" y="69" w="14" h="20" shift="15" offset="0"/>

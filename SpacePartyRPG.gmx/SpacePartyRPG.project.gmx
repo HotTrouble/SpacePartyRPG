@@ -1115,6 +1115,7 @@
       <background>background\tilesSnow</background>
       <background>background\tilesDungeon</background>
       <background>background\tilesInteriorFixed</background>
+      <background>background\spaceInteriorFixed</background>
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
@@ -1670,6 +1671,7 @@
       <room>rooms\rmConference</room>
       <room>rooms\rmAdminOffice</room>
       <room>rooms\rmComms</room>
+      <room>rooms\rmSecurity</room>
     </rooms>
     <room>rooms\rmTownNew</room>
     <room>rooms\rmDesert</room>
@@ -1707,7 +1709,7 @@
     <rtf>help.rtf</rtf>
   </help>
   <TutorialState>
-    <IsTutorial>0</IsTutorial>
+    <IsTutorial>-1</IsTutorial>
     <TutorialName>C:\Users\Brandon\AppData\Local\gamemaker_studio\tutorials\01 - My First Game\</TutorialName>
     <TutorialPage>1</TutorialPage>
   </TutorialState>
