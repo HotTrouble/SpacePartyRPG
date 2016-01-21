@@ -243,6 +243,7 @@
     <tile bgName="spaceInteriorFixed" x="320" y="288" w="32" h="32" xo="74" yo="326" id="10090939" name="inst_CAE4316B" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="spaceInteriorFixed" x="262" y="263" w="32" h="32" xo="254" yo="470" id="10090949" name="inst_0116A1BE" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="spaceInteriorFixed" x="262" y="294" w="32" h="32" xo="254" yo="506" id="10090950" name="inst_AF0754CB" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="spaceInteriorFixed" x="289" y="210" w="32" h="32" xo="290" yo="398" id="10091264" name="inst_930F26EF" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

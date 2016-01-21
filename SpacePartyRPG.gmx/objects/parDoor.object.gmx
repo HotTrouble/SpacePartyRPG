@@ -34,6 +34,7 @@ targetDoor = -1;    // id of the door within the given room
 
 useSfx = snd_DoorOpen;
 
+locked = false;
 </string>
           </argument>
         </arguments>

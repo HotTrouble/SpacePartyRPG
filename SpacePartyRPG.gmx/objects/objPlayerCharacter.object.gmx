@@ -346,7 +346,8 @@ if (!attacking)
         }
 
     // Moving
-    else if (h_spd!=0 || v_spd!=0)
+
+        else if (h_spd!=0 || v_spd!=0)
         {
         image_speed = 0.15;
         SetSpriteFromFace(spriteWalkNorth, spriteWalkSouth, spriteWalkEast, spriteWalkWest);
@@ -395,16 +396,17 @@ view_yview[0] = floor(median(0, room_height-view_hview[0], y-view_hview[0]/2));
             <string>
 // Open the door
 // It's effect is triggered at the end of it's animation
-if (!objGame.isPaused)
-    {
+if (!objGame.isPaused &amp;&amp; !other.locked)
+{
     with (other)
+    {
         image_speed = 0.2;
     }
-
-
-// Lock controls
-// So that you can't constantly walk through doors by holding UP
-controlsAble = false;
+    
+    // Lock controls
+    // So that you can't constantly walk through doors by holding UP
+    controlsAble = false;    
+}
 
 </string>
           </argument>

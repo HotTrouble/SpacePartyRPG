@@ -89,6 +89,27 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//objPlayerCharacter.visible=false;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="6" enumb="56">
       <action>
@@ -215,6 +236,27 @@
       </action>
       <action>
         <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>objPlayerCharacter.visible=false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>424</id>
         <kind>2</kind>
         <userelative>0</userelative>
@@ -227,8 +269,6 @@
         <relative>0</relative>
         <isnot>0</isnot>
       </action>
-    </event>
-    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>612</id>
@@ -273,29 +313,37 @@
       </action>
       <action>
         <libid>1</libid>
-        <id>514</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_draw_text</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>2</kind>
-            <string>Solved :)</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>32</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>32</string>
+            <kind>1</kind>
+            <string>show_debug_message("Defeated lights out");
+objGame.elevator=true;
+objPlayerCharacter.visible=true;
+
+// Set the global spawn do to our target, so objPlayer Control can access it
+global.spawnDoor = inst_ElevatorEnter;
+
+// If going to new room, or re-entering the current room
+var _dest;
+_dest = rmSecurity;
+    
+var _transition;
+_transition = instance_create(0, 0, objTransition);
+_transition.destRoom = _dest;
+_transition.steps = 0.25*room_speed;
+
+</string>
           </argument>
         </arguments>
       </action>
@@ -312,34 +360,6 @@
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>514</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_draw_text</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>2</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
       </action>
     </event>
   </events>

@@ -25,12 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-depth = -y;
+            <string>depth = -y;
 image_speed = 0.15;
 image_index = random(image_number);
 image_xscale = choose(-1, 1);
-
+self.activated=false;
 </string>
           </argument>
         </arguments>

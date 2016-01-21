@@ -38,6 +38,9 @@ isPaused = false;       // Game is actually paused
 userPaused = false;     // User commanded pause
 forcePaused = true;     // Something forced pause
 
+// Variables for tracking puzzle completion
+elevator=false;
+
 // Setup water animation
 AnimationInit(0, 10, Animation.loop, bckAnimationWater1, bckAnimationWater2, bckAnimationWater3, bckAnimationWater4, bckAnimationWater5);
 AnimationOrder(0, 1, 2, 3, 2, 1, 4, 5, 4);

@@ -610,6 +610,8 @@
     <extension index="0">extensions\YoYo RPG</extension>
     <extension index="1">extensions\EZMultiplayer Custom 1.2</extension>
     <extension index="2">extensions\Grids</extension>
+    <extension index="3">extensions\CRT Pixel Shader</extension>
+    <extension index="4">extensions\Eight-bit chillout Shader</extension>
   </NewExtensions>
   <sounds name="sound">
     <sounds name="SFX">
@@ -1073,6 +1075,7 @@
     <sprites name="ControlSprites">
       <sprite>sprites\control_sprite</sprite>
     </sprites>
+    <sprite>sprites\sprRoad</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="Splash Screens">
@@ -1117,6 +1120,7 @@
       <background>background\tilesInteriorFixed</background>
       <background>background\spaceInteriorFixed</background>
     </backgrounds>
+    <background>background\bg_test</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -1513,6 +1517,11 @@
       </scripts>
     </scripts>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\sh_CRT.shader</shader>
+    <shader type="GLSLES">shaders\fx8bitChilloutGrayscale.shader</shader>
+    <shader type="GLSLES">shaders\fx8bitChilloutColor.shader</shader>
+  </shaders>
   <fonts name="fonts">
     <font>fonts\fntHud</font>
     <font>fonts\fntDialogue</font>
@@ -1577,6 +1586,7 @@
       <object>objects\parInteract</object>
       <object>objects\objSign</object>
       <object>objects\objChest</object>
+      <object>objects\objVCR</object>
     </objects>
     <objects name="Dialogue">
       <object>objects\objDialogueBox</object>
@@ -1595,6 +1605,7 @@
     </objects>
     <objects name="Decoration">
       <object>objects\objTorch</object>
+      <object>objects\objElevatorCallPanel</object>
     </objects>
     <objects name="Quests">
       <object>objects\objQuestManager</object>
@@ -1656,6 +1667,9 @@
       <object>objects\diamond_cell</object>
       <object>objects\simpletest_diamond_control</object>
     </objects>
+    <object>objects\obj_CRT</object>
+    <object>objects\objOverlay</object>
+    <object>objects\objImage</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmSplashGameMaker</room>
@@ -1668,11 +1682,15 @@
     </rooms>
     <rooms name="Starbase23">
       <room>rooms\rmTransporter</room>
+      <room>rooms\roomStart</room>
       <room>rooms\rmConference</room>
       <room>rooms\rmAdminOffice</room>
       <room>rooms\rmComms</room>
       <room>rooms\rmSecurity</room>
+      <room>rooms\rmElevator</room>
+      <room>rooms\rmGameOpenElevator</room>
     </rooms>
+    <room>rooms\rmTavern</room>
     <room>rooms\rmTownNew</room>
     <room>rooms\rmDesert</room>
     <room>rooms\rmDesertCave</room>
@@ -1703,7 +1721,8 @@
       <room>rooms\path_finding_room2</room>
       <room>rooms\pathfinding_room</room>
     </rooms>
-    <room>rooms\rmTavern</room>
+    <room>rooms\rm_init</room>
+    <room>rooms\rm_main</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
