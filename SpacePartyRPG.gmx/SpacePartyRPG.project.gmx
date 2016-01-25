@@ -612,6 +612,7 @@
     <extension index="2">extensions\Grids</extension>
     <extension index="3">extensions\CRT Pixel Shader</extension>
     <extension index="4">extensions\Eight-bit chillout Shader</extension>
+    <extension index="5">extensions\SciFi Tileset</extension>
   </NewExtensions>
   <sounds name="sound">
     <sounds name="SFX">
@@ -724,6 +725,22 @@
         </sprites>
       </sprites>
       <sprite>sprites\sprDeathBones</sprite>
+      <sprites name="TopDown">
+        <sprite>sprites\human</sprite>
+        <sprite>sprites\human_player_mask</sprite>
+        <sprites name="Walking">
+          <sprite>sprites\human_south_spr</sprite>
+          <sprite>sprites\human_north_spr</sprite>
+          <sprite>sprites\human_west_spr</sprite>
+          <sprite>sprites\human_east_spr</sprite>
+        </sprites>
+        <sprites name="Idle">
+          <sprite>sprites\human_idle_west_spr</sprite>
+          <sprite>sprites\human_idle_east_spr</sprite>
+          <sprite>sprites\human_idle_south_spr</sprite>
+          <sprite>sprites\human_idle_north_spr</sprite>
+        </sprites>
+      </sprites>
     </sprites>
     <sprites name="Mobiles">
       <sprites name="Docile">
@@ -1076,6 +1093,12 @@
       <sprite>sprites\control_sprite</sprite>
     </sprites>
     <sprite>sprites\sprRoad</sprite>
+    <sprites name="Cards">
+      <sprite>sprites\clue_card_spr</sprite>
+    </sprites>
+    <sprites name="Icons">
+      <sprite>sprites\tv_spr</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="Splash Screens">
@@ -1121,6 +1144,8 @@
       <background>background\spaceInteriorFixed</background>
     </backgrounds>
     <background>background\bg_test</background>
+    <background>background\scifi_wallTiles</background>
+    <background>background\scifi_floorTiles</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -1169,6 +1194,7 @@
     </scripts>
     <scripts name="Sprite Functions">
       <script>scripts\SetSpriteFromFace.gml</script>
+      <script>scripts\DrawSpriteOutline.gml</script>
     </scripts>
     <scripts name="Mobile Functions">
       <script>scripts\MobileDoCollision.gml</script>
@@ -1254,6 +1280,7 @@
         </scripts>
       </scripts>
       <scripts name="Questlines">
+        <script>scripts\ConfirmLoad.gml</script>
         <scripts name="Hero Of The Land">
           <script>scripts\Quest_MonsterSlayer.gml</script>
           <script>scripts\Quest_FindingWanda.gml</script>
@@ -1283,7 +1310,6 @@
     <script>scripts\StringSepNumber.gml</script>
     <script>scripts\ConfirmSlot.gml</script>
     <script>scripts\ConfirmSave.gml</script>
-    <script>scripts\ConfirmLoad.gml</script>
     <scripts name="Lib">
       <scripts name="Algorithms">
         <script>scripts\gl_get_biggest_pointset.gml</script>
@@ -1516,6 +1542,10 @@
         <script>scripts\maze_init_grid.gml</script>
       </scripts>
     </scripts>
+    <scripts name="Cards">
+      <script>scripts\DrawTitle.gml</script>
+      <script>scripts\DrawIcon.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sh_CRT.shader</shader>
@@ -1530,6 +1560,10 @@
     <font>fonts\fntInterface</font>
     <font>fonts\label_font</font>
     <font>fonts\score_font</font>
+    <fonts name="Cards">
+      <font>fonts\card_title_font</font>
+      <font>fonts\card_text_font</font>
+    </fonts>
   </fonts>
   <objects name="objects">
     <object>objects\objGame</object>
@@ -1601,6 +1635,10 @@
       <object>objects\objDoorHouse</object>
       <object>objects\objDoorBlanker</object>
       <object>objects\objBlank</object>
+      <object>objects\objSouthDoor</object>
+      <object>objects\objNorthDoor</object>
+      <object>objects\objEastDoor</object>
+      <object>objects\objWestDoor</object>
       <object>objects\objBlankSideways</object>
     </objects>
     <objects name="Decoration">
@@ -1618,6 +1656,7 @@
       <object>objects\objSaveLoad</object>
     </objects>
     <object>objects\objTitle</object>
+    <object>objects\objTitle2</object>
     <object>objects\objCharacterSelect</object>
     <object>objects\objTransition</object>
     <object>objects\objPickupNotification</object>
@@ -1670,25 +1709,29 @@
     <object>objects\obj_CRT</object>
     <object>objects\objOverlay</object>
     <object>objects\objImage</object>
+    <objects name="Cards">
+      <object>objects\clue_card_obj</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmSplashGameMaker</room>
-    <rooms name="Title">
-      <room>rooms\rmTitle</room>
-      <room>rooms\rmSlotSelect</room>
-      <room>rooms\rmLoadGame</room>
-      <room>rooms\rmOptions</room>
-      <room>rooms\rmCharacterSelect</room>
-    </rooms>
     <rooms name="Starbase23">
       <room>rooms\rmTransporter</room>
-      <room>rooms\roomStart</room>
       <room>rooms\rmConference</room>
       <room>rooms\rmAdminOffice</room>
       <room>rooms\rmComms</room>
       <room>rooms\rmSecurity</room>
       <room>rooms\rmElevator</room>
       <room>rooms\rmGameOpenElevator</room>
+      <room>rooms\roomStart</room>
+      <room>rooms\scifiExampleRoom</room>
+    </rooms>
+    <rooms name="Title">
+      <room>rooms\rmTitle</room>
+      <room>rooms\rmSlotSelect</room>
+      <room>rooms\rmLoadGame</room>
+      <room>rooms\rmOptions</room>
+      <room>rooms\rmCharacterSelect</room>
     </rooms>
     <room>rooms\rmTavern</room>
     <room>rooms\rmTownNew</room>

@@ -53,9 +53,8 @@ show_debug_overlay(false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-instance_create(0, 0, objTransition);
-
+            <string>//instance_create(0, 0, objTransition);
+NewGame();
 </string>
           </argument>
         </arguments>

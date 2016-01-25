@@ -53,6 +53,7 @@
   <instances>
     <instance objName="objSplashScreen" x="32" y="32" name="inst_1CBE24D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objConstants" x="64" y="32" name="inst_E5968236" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objTitle2" x="96" y="32" name="inst_75052096" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

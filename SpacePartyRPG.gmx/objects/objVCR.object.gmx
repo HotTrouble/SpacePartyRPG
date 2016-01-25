@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(rmComms);
+            <string>var clue = instance_create(500, 70, clue_card_obj);
+clue.image_xscale=0.5;
+clue.image_yscale=0.5;
+clue.title="Clue: Monitor";
+clue.icon=tv_spr;
 </string>
           </argument>
         </arguments>

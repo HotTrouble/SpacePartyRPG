@@ -145,18 +145,34 @@ if (global.spawnDoor != -1)
     offset = (sprite_get_width(sprite)-xoff) / 2;
     
     // A blank door implies we are coming in from the south
-    if (global.spawnDoor.object_index == objBlank)
+    if (global.spawnDoor.object_index == objSouthDoor)
         {
+        show_debug_message("S");
         objPlayerCharacter.x = global.spawnDoor.x+offset;
         objPlayerCharacter.y = global.spawnDoor.y-4;
         objPlayerCharacter.face = NORTH;
         }
     // Otherwise, we are coming in from the north
-    else
+    else if (global.spawnDoor.object_index == objNorthDoor)
         {
+        show_debug_message("N");
         objPlayerCharacter.x = global.spawnDoor.x+offset;
         objPlayerCharacter.y = global.spawnDoor.y+64;
         objPlayerCharacter.face = SOUTH;
+        }
+    else if (global.spawnDoor.object_index == objWestDoor)
+        {
+        show_debug_message("W");
+        objPlayerCharacter.x = global.spawnDoor.x+64+16;
+        objPlayerCharacter.y = global.spawnDoor.y+offset;
+        objPlayerCharacter.face = EAST;
+        }
+    else if (global.spawnDoor.object_index == objEastDoor)
+        {
+        show_debug_message("E");
+        objPlayerCharacter.x = global.spawnDoor.x-16;
+        objPlayerCharacter.y = global.spawnDoor.y+offset;
+        objPlayerCharacter.face = WEST;
         }
     // Disable player input until they press something again
     objPlayerCharacter.controlsAble = false;
